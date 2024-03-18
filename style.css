@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  img{
+    filter: grayscale(100%);
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 5px 10px #DC5F00;
+    @media screen and (max-width: 599px){
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  img:hover{
+    filter: grayscale(0%);
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 5px 10px #DC5F00;
+    @media screen and (max-width: 599px){
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  body{
+    background:url(images/bg.jpg) ;
+    color: #DC5F00;
+    margin: 0;
+    padding: 0;
+  }
+  #sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    background: rgb(209, 0, 0);
+    width: 50px;
+    height: 50px;
+    top: 600px;
+    left: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #000;
+    color: #fff;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DC5F00;
+    color: black;
+    height: 50px;
+    padding: 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.mobile-nav-icon {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(209, 0, 0);
+    display: none;
+}
+
+
+/* Responsive Collapse Navigation Bar (Hambuger Menu) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 5px 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .navbar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-nav-icon {
+        display: block;
+    }
+
+    .mobile-nav-icon:hover+.navbar {
+        display: block;
+    }
+
+    .navbar:hover {
+        display: block;
+    }
+}
+
+  main{
+    padding: 2rem;
+    max-width: 1400px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+    color:#CF0A0A;
+  }
+  h2{
+    color: #DC5F00;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+  }
+  
+  h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  
+  .grid-wrapper{
+  
+    @media screen and (min-width: 600px){
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 1rem;
+     
+    }
+  
+    @media screen and (min-width: 1025px){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1024px){
+      grid-template-columns: 1fr 1fr;
+    }
+  
+  }
+  
+  article{
+    p{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 0.95rem;
+      color: #172234;
+    }
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #4d4d4d;
+  
+  
+    
+  
+    &:nth-child(4){
+      grid-area: 1/2/4/3;   
+    }
+  
+    &:nth-child(8){
+      @media screen and (min-width: 1025px){
+        grid-area: 1/4/4/-1;
+      }
+      @media screen and (min-width: 600px) and (max-width: 1024px){
+        grid-area: 4/2/8/3;
+      }
+    }
+  
+    &:nth-child(4n+3){
+      @media screen and (min-width: 1025px){
+        border-bottom: 0;
+      }   
+    }
+    &:nth-child(4){
+      @media screen and (min-width: 1025px){
+        border-right:1px solid #4d4d4d;
+        padding-right: 1rem;
+      }
+  
+    }
+    &:nth-child(4n){
+      @media screen and (min-width: 600px){
+        border-left:1px solid #4d4d4d;
+        border-bottom: 0;
+        padding-left: 1rem;
+      }
+    }
+  
+  
+  }
+  
+  .footer-note{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    background: #DC5F00;
+    padding: 1rem;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    a{
+      color: inherit;
+      font-weight: 600;
+    }
+  }
+  .footer-link, .copyright{
+    font-family:'Patrick Hand SC'; ;
+    font-size: 15px;
+    color: black;
+    margin: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
